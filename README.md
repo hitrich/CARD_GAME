@@ -77,17 +77,19 @@ exit
 
 Запустите контейнер из образа eosio-notechain, подключив контракты / сценарии к контейнеру, запустив сценарий init_blockchain.sh в качестве процесса. Сценарий init_blockchain.sh запускает локальный узел блокчейна и инициализирует кошельки / контракт / данные.
 
-```docker run --rm --name eosio_notechain_container \
+```
+docker run --rm --name eosio_notechain_container \
 -p 8888:8888 -p 9876:9876 \
 --mount type=bind,src="$(pwd)"/contracts,dst=/opt/eosio/bin/contracts \
 --mount type=bind,src="$(pwd)"/scripts,dst=/opt/eosio/bin/scripts \
 --mount type=bind,src="$(pwd)"/data,dst=/mnt/dev/data \
--w "/opt/eosio/bin/" eosio-notechain:eos1.8.6-cdt1.6.2 /bin/bash -c "./scripts/init_blockchain.sh" ```
+-w "/opt/eosio/bin/" eosio-notechain:eos1.8.6-cdt1.6.2 /bin/bash -c "./scripts/init_blockchain.sh" 
+```
 
 Выведите и следуйте журналам консоли докера:
 
-Логи докера eosio_notechain_container --follow
+Логи докера ```eosio_notechain_container --follow```
 Удалить контейнер (удалит все кошельки / контракты / данные),  если вы хотите повторно запустить весь DApp.
-docker rm -f eosio_notechain_container
+```docker rm -f eosio_notechain_container```
 Остановите контейнер 
-docker stop eosio_notechain_container
+```docker stop eosio_notechain_container```
