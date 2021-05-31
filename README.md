@@ -3,6 +3,8 @@ Dragon Card - это карточная игра для одного игрок�
  
 **- *Account*: `player1`**
 **- *Private Key*: `5KFyaxQW8L6uXFB6wSgC44EsAbzC7ideyhhQ68tiYfdKQp69xKo`**
+## Демонстрация Игры
+https://drive.google.com/file/d/1ojgJbOq0a8tZqGsANFMIIckzsL1HcVTz/view?usp=sharing
 
 # Начальная настройка
 Убедитесь, что Docker и Node.js установлены
